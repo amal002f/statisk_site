@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <title>Produkt liste</title>
   </head>
-  <body>
+  <body class="produktliste">
     <header class="menu">
       <a class="overskrift" href="index.html">
         <h1>Webshop</h1>
@@ -18,18 +18,21 @@
         <a href="produkt.html">Produkter</a>
       </nav>
     </header>
+
     <main>
-      <h2 class="overskriftpl">Produkter</h2>
-      <div class="grid_1-1-1-1">
-        <div class="produkt1">
+      <div id="beholder" class="grid_1-1-1-1">
+        <h2 class="overskriftpl">Produkter</h2>
+
+        <!-- <article class="produkt_udsolgt">
           <h3 class="udsolgt">Udsolgt</h3>
           <img class="produktimg1" src="https://kea-alt-del.dk/t7/images/webp/1000/1533.webp" alt="Bluse" />
           <h3 class="overskriftpl1">Trænings t-shirt</h3>
           <p class="tekstpl1">T-shirt - Puma</p>
           <p class="pris1">DKK 1595,-</p>
           <a class="læs_mere" href="produkt.html">Læs mere</a>
-        </div>
-        <div class="produkt2">
+        </article>
+
+        <article class="produkt_udsalg">
           <img class="produktimg2" src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="Bukser" />
           <h3 class="overskriftpl2">Trænings t-shirt</h3>
           <p class="tekstpl2">T-shirt - Puma</p>
@@ -39,15 +42,17 @@
             <p class="udsalgtekst2">-34%</p>
           </div>
           <a class="læs_mere" href="produkt.html">Læs mere</a>
-        </div>
-        <div class="produkt3">
+        </article>
+
+        <article class="produkt3">
           <img class="produktimg3" src="https://kea-alt-del.dk/t7/images/webp/1000/1533.webp" alt="Bluse" />
           <h3 class="overskriftpl3">Trænings t-shirt</h3>
           <p class="tekstpl3">T-shirt - Puma</p>
           <p class="pris3">DKK 1595,-</p>
           <a class="læs_mere" href="produkt.html">Læs mere</a>
-        </div>
-        <div class="produkt4">
+        </article>
+
+        <article class="produkt_udsalgogudsolgt">
           <h3 class="udsolgt">Udsolgt</h3>
           <img class="produktimg4" src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp" alt="Bukser" />
           <h3 class="overskriftpl4">Trænings t-shirt</h3>
@@ -58,8 +63,18 @@
             <p class="udsalgtekst2">-34%</p>
           </div>
           <a class="læs_mere" href="produkt.html">Læs mere</a>
-        </div>
+        </article> -->
       </div>
     </main>
+    <template id="minSkabelon">
+      <article class="produkt3">
+        <img class="produktimg3" src="https://kea-alt-del.dk/t7/images/webp/1000/1533.webp" alt="Bluse" />
+        <h3 class="overskriftpl3">Trænings t-shirt</h3>
+        <p class="tekstpl3">T-shirt - Puma</p>
+        <p class="pris3">DKK 1595,-</p>
+        <a class="læs_mere" href="produkt.html">Læs mere</a>
+      </article>
+    </template>
+    <script src="produktliste.js"></script>
   </body>
 </html>

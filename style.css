@@ -272,28 +272,49 @@ a:hover {
   padding-top: 10px;
 }
 
-/* flex box på det første billede (t-shirt) */
-.produkt1 {
+/* flex box på det første billede (t-shirt) det som er udsolgt */
+.produkt_udsolgt {
   display: flex;
   flex-direction: column;
 }
 
-/* flex box på det andet billede (bukser) */
-.produkt2 {
+/* flex box på det andet billede (bukser) det som er på udsalg */
+.produkt_udsalg {
   display: flex;
   flex-direction: column;
 }
 
-/* flex box på det trejde billede (t-shirt) */
+/* flex box på det trejde billede (t-shirt) det som hverken er på udsalg eller udsolgt */
 .produkt3 {
   display: flex;
   flex-direction: column;
 }
 
-/* flex box på det fjerde billede (bukser) */
-.produkt4 {
+/* flex box på det fjerde billede (bukser) det som både er udsolgt og på udsalg */
+.produkt_udsalgogudsolgt {
   display: flex;
   flex-direction: column;
+}
+
+.produktliste article {
+  display: flex;
+  flex-direction: column;
+}
+
+.produktliste article.produkt_udsolgt::before {
+  content: "Sold Out";
+  position: absolute;
+  background: var(--color);
+  color: var(--background-color);
+  padding: 1rem;
+}
+
+.produktliste article.produkt_udsalgogudsolgt::before {
+  content: "Sold Out";
+  position: absolute;
+  background: var(--color);
+  color: var(--background-color);
+  padding: 1rem;
 }
 
 /* sat siden ind i media så det er responsitv- altså også fungerer i mobil størrelse */
@@ -303,7 +324,7 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .grid_1-1-1-1 .overskriftpl {
+  /* .grid_1-1-1-1 .overskriftpl {
     grid-column: 1/3;
     grid-row: 1/2;
   }
@@ -330,7 +351,7 @@ a:hover {
   .submenu {
     display: flex;
     list-style-type: none;
-  }
+  } */
 }
 
 /* til siden produkt */

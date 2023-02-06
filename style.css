@@ -117,10 +117,10 @@ a:hover {
 
 /* Til de produkter som er på udsalg */
 /* produkt 2 er på udsalg*/
-.udsalg1 {
+/* .udsalg1 {
   display: flex;
   justify-content: space-between;
-}
+} */
 
 .udsalg2 {
   display: flex;
@@ -143,11 +143,22 @@ a:hover {
 } */
 
 /* lavet en boks rundt om 34%, så man ved at det er det procent man får */
-.udsalg1 p:last-child {
+.discounted p:last-child {
   background-color: rgb(219, 46, 46);
   padding: 5px;
   font-family: Merriweather;
   font-size: 15px;
+}
+
+/* mellem prisen og så udsalgsprocenten */
+.produktliste article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* gjort sådan så at man ikke kan se udsalgsskiltet på de produkter som ikke er på udsalg */
+.discounted {
+  display: none;
 }
 
 /* Til de produkter som er udsolgt */

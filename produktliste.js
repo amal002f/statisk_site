@@ -1,9 +1,5 @@
 const filNavn = "https://kea-alt-del.dk/t7/api/products";
 
-const id = 1533;
-
-const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
-
 function hentData(navn) {
   fetch(navn)
     .then((respons) => respons.json())
@@ -15,18 +11,18 @@ const beholder = document.querySelector("#beholder");
 
 function visData(json) {
   console.log(json);
-  json.forEach((produktliste) => {
+  json.forEach((produkt) => {
     const klon = skabelon.cloneNode(true);
-    klon.querySelector(".overskriftpl3").textContent = produktliste.productdisplayname;
-    klon.querySelector(".pris3").textContent = produktliste.price;
-    klon.querySelector(".tekstpl3").textContent = produktliste.articletype;
-    if (produktliste.soldout) {
+    klon.querySelector(".overskriftpl3").textContent = produkt.productdisplayname;
+    klon.querySelector(".pris3").textContent = produkt.price;
+    klon.querySelector(".tekstpl3").textContent = produkt.articletype;
+    if (produkt.soldout) {
       klon.querySelector("article").classList.add("soldOut");
     }
-    if (produktliste.discount) {
+    if (produkt.discount) {
       klon.querySelector("article").classList.add("onSale");
     }
-    // klon.querySelector(".produktimg3").src = imagePath;
+    klon.querySelector(".produktimg").src = `https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp`;
     beholder.appendChild(klon);
   });
 }

@@ -265,7 +265,21 @@ a:hover {
   padding-top: 8px;
 }
 
-/* teksten på prisen på det første billede */
+.pris {
+  font-family: "Merriweather";
+  font-size: 15px;
+  color: #5c5858;
+  padding-top: 9px;
+}
+
+.pristekst {
+  font-family: "Merriweather";
+  font-size: 15px;
+  color: #5c5858;
+  padding-top: 9px;
+}
+
+/* teksten på prisen på det første billede
 .pris1 {
   font-family: "Merriweather";
   font-size: 15px;
@@ -274,28 +288,28 @@ a:hover {
 }
 
 /* teksten på prisen på det andet billede */
-.pris2 {
+/* .pris2 {
   font-family: "Merriweather";
   font-size: 15px;
   color: #5c5858;
   padding-top: 9px;
-}
+} */
 
 /* teksten på prisen på det trejde billede */
-.pris3 {
+/* .pris3 {
   font-family: "Merriweather";
   font-size: 15px;
   color: #5c5858;
   padding-top: 9px;
-}
+} */
 
 /* /* teksten på prisen på det fjerde billede */
-.pris4 {
+/* .pris4 {
   font-family: "Merriweather";
   font-size: 15px;
   color: #5c5858;
   padding-top: 9px;
-}
+} */
 
 /* linket til at læse mere om produktet */
 .læs_mere {
@@ -303,6 +317,14 @@ a:hover {
   font-size: 15px;
   color: rgb(92, 88, 88);
   padding-top: 10px;
+}
+
+/* navnet på hvilket brand produktet er */
+.brand {
+  font-family: "Merriweather";
+  font-size: 15px;
+  padding-top: 7px;
+  color: rgb(147, 143, 143);
 }
 
 /* flex box på det første billede (t-shirt) det som er udsolgt */
@@ -336,7 +358,7 @@ a:hover {
 
 /* udsolgt skilt på produkt 1 og 2*/
 .produktliste article.soldOut::before {
-  content: "Udsolgt";
+  content: "Sold Out";
   position: absolute;
   background: var(--color);
   background: rgb(153, 149, 149);

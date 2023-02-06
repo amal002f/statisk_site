@@ -117,17 +117,14 @@ a:hover {
 
 /* Til de produkter som er på udsalg */
 /* produkt 2 er på udsalg*/
-.udsalg {
+.udsalg1 {
   display: flex;
   justify-content: space-between;
 }
 
-/* tekst til produkt 2 og 4, som er på udsalg */
-.udsalgtekst2 {
-  background-color: rgb(219, 46, 46);
-  padding: 5px;
-  font-family: Merriweather;
-  font-size: 15px;
+.udsalg2 {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* tekst "Nu; DKK 1560,-" på produkt 2 og 4 som er på udsalg */
@@ -135,6 +132,22 @@ a:hover {
   padding-top: 6px;
   color: #5c5858;
   font-family: "Merriweather";
+}
+
+/* tekst til produkt 2 og 4, som er på udsalg */
+/* .udsalgtekst2 {
+  background-color: rgb(219, 46, 46);
+  padding: 5px;
+  font-family: Merriweather;
+  font-size: 15px;
+} */
+
+/* lavet en boks rundt om 34%, så man ved at det er det procent man får */
+.udsalg1 p:last-child {
+  background-color: rgb(219, 46, 46);
+  padding: 5px;
+  font-family: Merriweather;
+  font-size: 15px;
 }
 
 /* Til de produkter som er udsolgt */
@@ -148,8 +161,17 @@ a:hover {
   opacity: 0.6;
 }
 
-/* sat et udsolgt tekst på billedet 1 og 4 så man kan se at det er udsolgt */
-.udsolgt {
+/* sat et udsolgt tekst på billedet 1, så man kan se at det er udsolgt*/
+.udsolgt1 {
+  position: absolute;
+  background: rgb(153, 149, 149);
+  color: rgb(247, 247, 247);
+  padding: 18px;
+  font-family: Merriweather;
+}
+
+/* sat et udsolgt tekst på billedet 4 så man kan se at det er udsolgt */
+.udsolgt2 {
   position: absolute;
   background: rgb(153, 149, 149);
   color: rgb(247, 247, 247);
@@ -273,48 +295,48 @@ a:hover {
 }
 
 /* flex box på det første billede (t-shirt) det som er udsolgt */
-.produkt_udsolgt {
+/* .produkt1_udsolgt {
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* flex box på det andet billede (bukser) det som er på udsalg */
-.produkt_udsalg {
+/* .produkt1_udsalg {
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* flex box på det trejde billede (t-shirt) det som hverken er på udsalg eller udsolgt */
-.produkt3 {
+/* .produkt1 {
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* flex box på det fjerde billede (bukser) det som både er udsolgt og på udsalg */
-.produkt_udsalgogudsolgt {
+/* .produkt1_udsalg_udsolgt {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .produktliste article {
   display: flex;
   flex-direction: column;
 }
 
-.produktliste article.produkt_udsolgt::before {
-  content: "Sold Out";
+/* udsolgt skilt på produkt 1 og 2*/
+.produktliste article.soldOut::before {
+  content: "Udsolgt";
   position: absolute;
   background: var(--color);
-  color: var(--background-color);
-  padding: 1rem;
+  background: rgb(153, 149, 149);
+  color: rgb(247, 247, 247);
+  padding: 20px;
+  font-family: Merriweather;
+  font-size: 18px;
 }
 
-.produktliste article.produkt_udsalgogudsolgt::before {
-  content: "Sold Out";
-  position: absolute;
-  background: var(--color);
-  color: var(--background-color);
-  padding: 1rem;
+.produktliste article.soldOut .produktimg {
+  opacity: 0.5;
 }
 
 /* sat siden ind i media så det er responsitv- altså også fungerer i mobil størrelse */

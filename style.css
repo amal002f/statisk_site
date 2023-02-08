@@ -12,7 +12,7 @@ img {
 
 /* givet alle siderne en baggrundsfarve */
 body {
-  background-color: #eceff3;
+  background-color: #ebeae3;
 }
 
 .menu {
@@ -20,7 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: +1;
+  /* z-index: +1; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   padding-top: 85px;
@@ -31,8 +31,34 @@ body {
 h1 {
   font-family: "Oswald";
   font-size: 75px;
-  justify-content: space-between;
-  color: #434242;
+  color: #796565;
+}
+
+/* til de links på forsiden, skal have en større skrift end de andre links, på de andre sider*/
+.indexa {
+  font-size: 26px;
+  text-decoration: none;
+  /* color: rgba(181, 151, 117, 0.78); */
+  color: #796767;
+}
+
+/* h1- overskriften på index siden */
+.indexh1 {
+  text-align: center;
+  margin: auto;
+  font-size: 130px;
+  padding-top: 50px;
+  /* color: rgba(159, 128, 90, 0.78); */
+  color: #796565;
+}
+
+@media (max-width: 800px) {
+  .indexh1 {
+    /* text-align: center; */
+    /* display: 100%; */
+    padding-top: 0px;
+    font-size: 100px;
+  }
 }
 
 /* link til index.html når man trykker på h1 (overskriften) */
@@ -43,7 +69,7 @@ h1 {
 
 /* liste til menuen*/
 ul {
-  display: block;
+  display: inline;
   margin-block-start: 16px;
   margin-block-end: 16px;
   margin-inline-start: 0px;
@@ -54,9 +80,10 @@ ul {
 /* liste til menuen */
 li {
   font-family: "Merriweather";
-  font-size: 18px;
-  list-style-position: inside;
+  font-size: 30px;
+  /* list-style-position: inside; */
   padding: 8px;
+  text-align: center;
 }
 
 a {
@@ -70,17 +97,18 @@ a:hover {
   color: #252d38;
 }
 
-/* til siden kategori */
+/* til siden kategorier */
 
 /* h2 på kategorier overskriften */
 .overskriftk1 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   padding-top: 20px;
   font-family: "Oswald";
   font-size: 50px;
-  color: #5c5858;
+  /* color: #5c5858; */
+  color: #796767;
 }
 
 /* grid på de forskellige kategorier */
@@ -88,8 +116,7 @@ a:hover {
   padding: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 16px;
+  gap: 19px;
 }
 
 /* teksten inde i hver boks */
@@ -102,13 +129,20 @@ a:hover {
   font-family: "Merriweather";
 }
 
+@media (max-width: 800px) {
+  .kategori {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 /* til siden produktliste */
 /* grid på de forskellige produkter (billede samt tekst og links) */
 .grid_1-1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 50px;
-  gap: 26px;
+  gap: 30px;
 }
 
 .grid_1-1-1-1 .overskriftpl {
@@ -192,12 +226,13 @@ a:hover {
 
 /* h2 på overskriften "produkter" */
 .overskriftpl {
-  display: block;
+  /* display: block; */
   /* padding-inline-start: 50px;
   padding-inline-end: 50px; */
   font-family: "Oswald";
   font-size: 50px;
-  color: #5c5858;
+  /* color: #5c5858; */
+  color: #796767;
   /* padding-top: 20px; */
 }
 
@@ -418,67 +453,67 @@ a:hover {
 
 /* h2 på produkt information */
 .overskriftp1 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Oswald";
-  font-size: 50px;
-  color: rgb(92, 88, 88);
+  font-size: 54px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 40px;
+  color: #796767;
 }
 
 /* h3 på navn på produkt */
 .overskriftp2 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Oswald";
   font-size: 34px;
-  color: rgb(92, 88, 88);
   text-align: center;
   padding-top: 65px;
+  color: #796767;
 }
 
 /* h3 på farven */
 .overskriftp3 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Oswald";
   font-size: 34px;
-  color: rgb(92, 88, 88);
   text-align: center;
   padding-top: 30px;
+  color: #796767;
 }
 
-/* h3 på størrelse */
+/* h3 på køn*/
 .overskriftp4 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Oswald";
   font-size: 34px;
-  color: rgb(92, 88, 88);
   text-align: center;
   padding-top: 22px;
+  color: #796767;
 }
 
 /* h3 på mærke */
 .overskriftp5 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Oswald";
   font-size: 34px;
-  color: rgb(92, 88, 88);
   text-align: center;
   padding-top: 20px;
+  color: #796767;
 }
 
 /* tekst på mærke navn */
 .tekstp1 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Merriweather";
@@ -489,7 +524,7 @@ a:hover {
 
 /* tekst på farven */
 .tekstp2 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Merriweather";
@@ -500,7 +535,7 @@ a:hover {
 
 /* tekst på størrelse */
 .tekstp3 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Merriweather";
@@ -511,7 +546,7 @@ a:hover {
 
 /* tekst på Puma */
 .tekstp4 {
-  display: block;
+  /* display: block; */
   padding-inline-start: 50px;
   padding-inline-end: 50px;
   font-family: "Merriweather";
@@ -530,6 +565,15 @@ a:hover {
   .produkt {
     grid-column: 1/3;
     grid-row: 2/3;
+  }
+
+  .overskriftp1 {
+    font-size: 45px;
+    padding-top: 50px;
+  }
+
+  .overskriftp2 {
+    padding-top: 36px;
   }
 
   .menu {

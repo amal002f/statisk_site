@@ -1,4 +1,11 @@
-const filNavn = "https://kea-alt-del.dk/t7/api/products";
+const urlParams = new URLSearchParams(window.location.search);
+const sea = urlParams.get("sea");
+
+// const url = `https://kea-alt-del.dk/t7/api/products?limit=20&category=§{cat}`;
+
+const filNavn = `https://kea-alt-del.dk/t7/api/products?limit=20&season=${sea}`;
+
+document.querySelector(".overskriftpl").textContent = sea;
 
 function hentData(navn) {
   fetch(navn)
@@ -18,6 +25,8 @@ function visData(json) {
     klon.querySelector(".tekstpl3").textContent = produkt.articletype;
     klon.querySelector(".brand").textContent = produkt.brandname;
     klon.querySelector(".procent").textContent = produkt.discount;
+    klon.querySelector(".udsalgtekst1 span").textContent = Math.round(produkt.price - produkt.price * (produkt.discount / 100));
+    klon.querySelector("a").href = "produkt.html?id=" + produkt.id;
 
     if (produkt.soldout) {
       klon.querySelector("article").classList.add("soldOut");

@@ -1,4 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
+
 const sea = urlParams.get("sea");
 
 // const url = `https://kea-alt-del.dk/t7/api/products?limit=20&category=§{cat}`;

@@ -1,8 +1,8 @@
 // lav url search objekt
 const urlParams = new URLSearchParams(window.location.search);
-// find id
 
 console.log(urlParams);
+// find id
 const id = urlParams.get("id");
 const url = `https://kea-alt-del.dk/t7/api/products/${id}`;
 
